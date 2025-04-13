@@ -1,0 +1,144 @@
+Flowchart Data (JSON):
+
+{
+  "nodes": [
+    {
+      "id": "data_structures",
+      "label": "Data Structures",
+      "level": 0
+    },
+    {
+      "id": "data_structures_arrays",
+      "label": "Arrays",
+      "level": 1
+    },
+    {
+      "id": "data_structures_linked_lists",
+      "label": "Linked Lists",
+      "level": 1
+    },
+    {
+      "id": "data_structures_stacks",
+      "label": "Stacks",
+      "level": 1
+    },
+    {
+      "id": "data_structures_queues",
+      "label": "Queues",
+      "level": 1
+    },
+    {
+      "id": "data_structures_hash_maps",
+      "label": "Hash Maps",
+      "level": 1
+    },
+    {
+      "id": "data_structures_trees",
+      "label": "Trees",
+      "level": 1
+    },
+    {
+      "id": "data_structures_graphs",
+      "label": "Graphs",
+      "level": 1
+    },
+    {
+      "id": "data_structures_heaps",
+      "label": "Heaps",
+      "level": 1
+    },
+    {
+      "id": "algorithms",
+      "label": "Algorithms",
+      "level": 0
+    },
+    {
+      "id": "algorithms_sorting",
+      "label": "Sorting Algorithms",
+      "level": 1
+    },
+    {
+      "id": "algorithms_searching",
+      "label": "Searching Algorithms",
+      "level": 1
+    },
+    {
+      "id": "algorithms_graph_algorithms",
+      "label": "Graph Algorithms",
+      "level": 1
+    },
+    {
+      "id": "algorithms_dynamic_programming",
+      "label": "Dynamic Programming",
+      "level": 1
+    },
+    {
+      "id": "algorithms_backtracking",
+      "label": "Backtracking",
+      "level": 1
+    },
+    {
+      "id": "algorithms_divide_and_conquer",
+      "label": "Divide and Conquer",
+      "level": 1
+    }
+  ],
+  "edges": [
+    {
+      "from": "data_structures",
+      "to": "data_structures_arrays"
+    },
+    {
+      "from": "data_structures",
+      "to": "data_structures_linked_lists"
+    },
+    {
+      "from": "data_structures",
+      "to": "data_structures_stacks"
+    },
+    {
+      "from": "data_structures",
+      "to": "data_structures_queues"
+    },
+    {
+      "from": "data_structures",
+      "to": "data_structures_hash_maps"
+    },
+    {
+      "from": "data_structures",
+      "to": "data_structures_trees"
+    },
+    {
+      "from": "data_structures",
+      "to": "data_structures_graphs"
+    },
+    {
+      "from": "data_structures",
+      "to": "data_structures_heaps"
+    },
+    {
+      "from": "algorithms",
+      "to": "algorithms_sorting"
+    },
+    {
+      "from": "algorithms",
+      "to": "algorithms_searching"
+    },
+    {
+      "from": "algorithms",
+      "to": "algorithms_graph_algorithms"
+    },
+    {
+      "from": "algorithms",
+      "to": "algorithms_dynamic_programming"
+    },
+    {
+      "from": "algorithms",
+      "to": "algorithms_backtracking"
+    },
+    {
+      "from": "algorithms",
+      "to": "algorithms_divide_and_conquer"
+    }
+  ]
+}

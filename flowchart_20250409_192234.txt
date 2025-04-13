@@ -1,0 +1,5 @@
+graph TB;
+datastructures([Data Structures]rect)
+algorithms([Algorithms]rect)
+style datastructures fill:#4CAF50,stroke:#333,stroke-width:2px
+style algorithms fill:#4CAF50,stroke:#333,stroke-width:2px

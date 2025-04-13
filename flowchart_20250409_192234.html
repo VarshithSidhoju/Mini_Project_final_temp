@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mermaid Flowchart</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'default' });
+    </script>
+    <style>
+        .mermaid {
+            height: 750px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="mermaid">
+        graph TB;
+datastructures([Data Structures]rect)
+algorithms([Algorithms]rect)
+style datastructures fill:#4CAF50,stroke:#333,stroke-width:2px
+style algorithms fill:#4CAF50,stroke:#333,stroke-width:2px
+    </div>
+</body>
+</html>

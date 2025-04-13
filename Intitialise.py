@@ -1,36 +1,42 @@
+# initialise.py
 import streamlit as st
 from datetime import datetime
 import json
+try:
+    from firebase_auth import is_authenticated, get_starred_topics  # Explicit import
+except ImportError:
+    # Fallback if firebase_auth is incomplete
+    def is_authenticated(): return False
+    def get_starred_topics(uid): return {}
+from pyvis.network import Network
+import streamlit.components.v1 as components
 
 def initialize_session():
     """Initialize all session state variables with enhanced defaults"""
     session_defaults = {
-        # Input Handling
         "uploaded_file": None,
         "custom_topic": "",
         "file_content": "",
-        
-        # Navigation Control
-        "page": "upload",  # States: upload, options, topics, questions, mock_tests, results, analysis
-        
-        # Test Content Management
+        "page": "upload",
+        "topics_dict": {},
+        "topics_list": [],
+        "starred_topics": {},
+        "selected_topics": [],
         "questions": [],
         "current_question_index": 0,
-        "question_types": [],  # Track distribution of question types
-        
-        # Test Progress Tracking
+        "question_types": [],
         "user_answers": {},
         "test_active": False,
         "test_completed": False,
         "test_generated": False,
-        
-        # Timing Metrics
         "start_time": None,
         "end_time": None,
         "time_taken": None,
         "time_per_question": [],
-        
-        # Comprehensive Analysis Results
+        "firebase_collections": {
+            "user_topics": "user_topics",
+            "flowcharts": "user_flowcharts"
+        },
         "analysis_results": {
             "score": 0.0,
             "total_questions": 0,
@@ -46,27 +52,29 @@ def initialize_session():
             },
             "question_details": [],
             "keywords_matched": 0,
-            "total_keywords": 0
+            "total_keywords": 0,
+            "knowledge_gaps": []
         },
-        
-        # Leaderboard System
         "leaderboard": [],
         "personal_best": None,
-        
-        # Question Generation Settings
         "subject": "",
         "topics": [],
         "difficulty": "Medium",
         "num_mcq": 5,
         "num_short_answer": 3,
-        
-        # Template Management
+        "flowchart_settings": {
+            "node_size": 25,
+            "main_topic_color": "#4CAF50",
+            "subtopic_color": "#FFECB3",
+            "starred_color": "#FFD700",
+            "layout": "hierarchical"
+        },
         "templates": {},
         "current_template": None,
-        
-        # Error Handling
         "last_error": None,
-        "generation_attempts": 0
+        "generation_attempts": 0,
+        "flowchart_generated": False,
+        "last_flowchart_path": None
     }
     
     # Initialize only missing variables
@@ -74,30 +82,41 @@ def initialize_session():
         if key not in st.session_state:
             st.session_state[key] = value
     
+    # Initialize topics_dict if not exists but topics_list exists
+    if not st.session_state.topics_dict and st.session_state.topics_list:
+        st.session_state.topics_dict = {topic: [] for topic in st.session_state.topics_list}
+    
     # Load templates if not loaded
     if not st.session_state.templates:
         try:
             with open("templates.json", "r") as f:
                 st.session_state.templates = json.load(f)
+                if "flowchart" not in st.session_state.templates:
+                    st.session_state.templates["flowchart"] = {
+                        "node_size": 25,
+                        "colors": {
+                            "main": "#4CAF50",
+                            "sub": "#FFECB3",
+                            "starred": "#FFD700"
+                        }
+                    }
         except (FileNotFoundError, json.JSONDecodeError):
-            st.session_state.templates = {
-                "default": {
-                    "num_mcq": 5,
-                    "num_short_answer": 3,
-                    "time_limit": 30
-                }
-            }
+            st.session_state.templates = session_defaults["templates"]
     
     # Initialize question type tracking
     if not st.session_state.question_types:
         st.session_state.question_types = ["MCQ", "Short Answer"]
-    
-    # Ensure analysis_results structure
-    required_analysis_keys = [
-        "performance_by_type", 
-        "question_details",
-        "keywords_matched"
-    ]
-    for key in required_analysis_keys:
-        if key not in st.session_state.analysis_results:
-            st.session_state.analysis_results[key] = session_defaults["analysis_results"][key]
+
+    # Initialize starred topics from Firebase if authenticated
+    if is_authenticated() and not st.session_state.starred_topics:
+        try:
+            starred_data = get_starred_topics(st.session_state.user['uid'])
+            if starred_data:
+                st.session_state.starred_topics = {
+                    data['point']: True 
+                    for data in starred_data.values() 
+                    if data.get('starred', False)
+                }
+        except (NameError, AttributeError, Exception) as e:
+            st.warning(f"Could not load starred topics: {str(e)}. Proceeding without starred topics.")
+            st.session_state.starred_topics = {}

@@ -1,0 +1,76 @@
+Flowchart Data (JSON):
+
+{
+  "nodes": [
+    {
+      "id": "dat_structures_algos",
+      "label": "Data Structures and Algorithms",
+      "level": 0
+    },
+    {
+      "id": "dat_structures_algos_arrays",
+      "label": "Arrays",
+      "level": 1
+    },
+    {
+      "id": "dat_structures_algos_linked_lists",
+      "label": "Linked Lists",
+      "level": 1
+    },
+    {
+      "id": "dat_structures_algos_stacks",
+      "label": "Stacks",
+      "level": 1
+    },
+    {
+      "id": "dat_structures_algos_queues",
+      "label": "Queues",
+      "level": 1
+    },
+    {
+      "id": "dat_structures_algos_trees",
+      "label": "Trees",
+      "level": 1
+    },
+    {
+      "id": "dat_structures_algos_graphs",
+      "label": "Graphs",
+      "level": 1
+    },
+    {
+      "id": "dat_structures_algos_hashing",
+      "label": "Hashing",
+      "level": 1
+    }
+  ],
+  "edges": [
+    {
+      "from": "dat_structures_algos",
+      "to": "dat_structures_algos_arrays"
+    },
+    {
+      "from": "dat_structures_algos",
+      "to": "dat_structures_algos_linked_lists"
+    },
+    {
+      "from": "dat_structures_algos",
+      "to": "dat_structures_algos_stacks"
+    },
+    {
+      "from": "dat_structures_algos",
+      "to": "dat_structures_algos_queues"
+    },
+    {
+      "from": "dat_structures_algos",
+      "to": "dat_structures_algos_trees"
+    },
+    {
+      "from": "dat_structures_algos",
+      "to": "dat_structures_algos_graphs"
+    },
+    {
+      "from": "dat_structures_algos",
+      "to": "dat_structures_algos_hashing"
+    }
+  ]
+}

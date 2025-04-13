@@ -11,7 +11,7 @@ from Process import process_task
 from typing import List, Dict, Union
 from datetime import datetime
 from login_page import show_login_page
-from firebase_auth import is_authenticated, logout_user
+from firebase_auth import is_authenticated, logout_user,save_starred_topic
 # Page configuration
 st.set_page_config(page_title="Edugenius", layout="centered")
 

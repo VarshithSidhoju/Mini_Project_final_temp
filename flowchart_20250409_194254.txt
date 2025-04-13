@@ -1,0 +1,25 @@
+Note: This is a Plotly-based flowchart. Original Mermaid code concept:
+
+graph td;
+DS_A([Data Structures]rect)
+ALG_A([Algorithms]rect)
+ARRAY([Array]circle)
+LINKEDLIST([Linked List]circle)
+STACK([Stack]circle)
+QUEUE([Queue]circle)
+HASH([Hash Table]circle)
+TREE([Tree]circle)
+GRAPH([Graph]circle)
+SORT([Sorting Algorithms]circle)
+SEARCH([Searching Algorithms]circle)
+BACKTRACKING([Backtracking Algorithms]circle)
+DS_A --> ARRAY
+DS_A --> LINKEDLIST
+DS_A --> STACK
+DS_A --> QUEUE
+DS_A --> HASH
+DS_A --> TREE
+DS_A --> GRAPH
+ALG_A --> SORT
+ALG_A --> SEARCH
+ALG_A --> BACKTRACKING

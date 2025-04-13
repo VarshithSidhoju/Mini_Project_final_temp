@@ -1,0 +1,22 @@
+Flowchart Data (JSON):
+
+{
+  "nodes": [
+    {
+      "id": "data_structures_algorithms",
+      "label": "Data Structures and Algorithms",
+      "level": 0
+    },
+    {
+      "id": "data_structures_algorithms_graph",
+      "label": "Graph",
+      "level": 1
+    }
+  ],
+  "edges": [
+    {
+      "from": "data_structures_algorithms",
+      "to": "data_structures_algorithms_graph"
+    }
+  ]
+}
