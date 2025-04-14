@@ -1,0 +1,40 @@
+Mind Map Data (JSON):
+
+{
+  "nodes": [
+    {
+      "id": "history_of_india",
+      "label": "History of India",
+      "level": 0
+    },
+    {
+      "id": "history_of_india_ancient_india",
+      "label": "Ancient India",
+      "level": 1
+    },
+    {
+      "id": "history_of_india_medieval_india",
+      "label": "Medieval India",
+      "level": 1
+    },
+    {
+      "id": "history_of_india_modern_india",
+      "label": "Modern India",
+      "level": 1
+    }
+  ],
+  "edges": [
+    {
+      "from": "history_of_india",
+      "to": "history_of_india_ancient_india"
+    },
+    {
+      "from": "history_of_india",
+      "to": "history_of_india_medieval_india"
+    },
+    {
+      "from": "history_of_india",
+      "to": "history_of_india_modern_india"
+    }
+  ]
+}

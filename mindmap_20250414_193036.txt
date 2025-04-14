@@ -1,0 +1,49 @@
+Mind Map Data (JSON):
+
+{
+  "nodes": [
+    {
+      "id": "full_stack_web_development",
+      "label": "Full Stack Web Development",
+      "level": 0
+    },
+    {
+      "id": "full_stack_web_development_frontend",
+      "label": "Frontend Development",
+      "level": 1
+    },
+    {
+      "id": "full_stack_web_development_backend",
+      "label": "Backend Development",
+      "level": 1
+    },
+    {
+      "id": "full_stack_web_development_database",
+      "label": "Database Management",
+      "level": 1
+    },
+    {
+      "id": "full_stack_web_development_devops",
+      "label": "DevOps",
+      "level": 1
+    }
+  ],
+  "edges": [
+    {
+      "from": "full_stack_web_development",
+      "to": "full_stack_web_development_frontend"
+    },
+    {
+      "from": "full_stack_web_development",
+      "to": "full_stack_web_development_backend"
+    },
+    {
+      "from": "full_stack_web_development",
+      "to": "full_stack_web_development_database"
+    },
+    {
+      "from": "full_stack_web_development",
+      "to": "full_stack_web_development_devops"
+    }
+  ]
+}

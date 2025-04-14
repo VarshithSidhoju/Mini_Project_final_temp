@@ -91,14 +91,13 @@ def initialize_session():
         try:
             with open("templates.json", "r") as f:
                 st.session_state.templates = json.load(f)
-                if "flowchart" not in st.session_state.templates:
-                    st.session_state.templates["flowchart"] = {
-                        "node_size": 25,
-                        "colors": {
-                            "main": "#4CAF50",
-                            "sub": "#FFECB3",
-                            "starred": "#FFD700"
-                        }
+                if 'flowchart_settings' not in st.session_state:
+                    st.session_state.flowchart_settings = {
+                        "layout": "Radial",
+                        "node_size": 30,
+                        "main_topic_color": "#FF5722",
+                        "subtopic_color": "#4CAF50",
+                        "starred_color": "#FF9800"
                     }
         except (FileNotFoundError, json.JSONDecodeError):
             st.session_state.templates = session_defaults["templates"]
