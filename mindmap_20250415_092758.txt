@@ -1,0 +1,49 @@
+Mind Map Data (JSON):
+
+{
+  "nodes": [
+    {
+      "id": "ancient_history_of_india",
+      "label": "Ancient History of India",
+      "level": 0
+    },
+    {
+      "id": "ancient_history_of_india_indus_valley_civilization",
+      "label": "Indus Valley Civilization",
+      "level": 1
+    },
+    {
+      "id": "ancient_history_of_india_vedic_period",
+      "label": "Vedic Period",
+      "level": 1
+    },
+    {
+      "id": "ancient_history_of_india_mauryan_empire",
+      "label": "Mauryan Empire",
+      "level": 1
+    },
+    {
+      "id": "ancient_history_of_india_gupta_empire",
+      "label": "Gupta Empire",
+      "level": 1
+    }
+  ],
+  "edges": [
+    {
+      "from": "ancient_history_of_india",
+      "to": "ancient_history_of_india_indus_valley_civilization"
+    },
+    {
+      "from": "ancient_history_of_india",
+      "to": "ancient_history_of_india_vedic_period"
+    },
+    {
+      "from": "ancient_history_of_india",
+      "to": "ancient_history_of_india_mauryan_empire"
+    },
+    {
+      "from": "ancient_history_of_india",
+      "to": "ancient_history_of_india_gupta_empire"
+    }
+  ]
+}

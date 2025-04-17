@@ -5,6 +5,7 @@ from typing import List, Dict
 from datetime import datetime
 from model import get_output
 
+
 def generate_mock_test(topic: str) -> List[Dict]:
     """Generate mock test questions with robust error handling"""
     # Input validation

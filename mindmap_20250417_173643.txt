@@ -1,4 +1,4 @@
-Flowchart Data (JSON):
+Mind Map Data (JSON):
 
 {
   "nodes": [
@@ -28,11 +28,6 @@ Flowchart Data (JSON):
       "level": 1
     },
     {
-      "id": "data_structures_hash_maps",
-      "label": "Hash Maps",
-      "level": 1
-    },
-    {
       "id": "data_structures_trees",
       "label": "Trees",
       "level": 1
@@ -43,8 +38,8 @@ Flowchart Data (JSON):
       "level": 1
     },
     {
-      "id": "data_structures_heaps",
-      "label": "Heaps",
+      "id": "data_structures_hash_tables",
+      "label": "Hash Tables",
       "level": 1
     },
     {
@@ -54,12 +49,12 @@ Flowchart Data (JSON):
     },
     {
       "id": "algorithms_sorting",
-      "label": "Sorting Algorithms",
+      "label": "Sorting",
       "level": 1
     },
     {
       "id": "algorithms_searching",
-      "label": "Searching Algorithms",
+      "label": "Searching",
       "level": 1
     },
     {
@@ -78,8 +73,8 @@ Flowchart Data (JSON):
       "level": 1
     },
     {
-      "id": "algorithms_divide_and_conquer",
-      "label": "Divide and Conquer",
+      "id": "algorithms_greedy_algorithms",
+      "label": "Greedy Algorithms",
       "level": 1
     }
   ],
@@ -102,10 +97,6 @@ Flowchart Data (JSON):
     },
     {
       "from": "data_structures",
-      "to": "data_structures_hash_maps"
-    },
-    {
-      "from": "data_structures",
       "to": "data_structures_trees"
     },
     {
@@ -114,7 +105,7 @@ Flowchart Data (JSON):
     },
     {
       "from": "data_structures",
-      "to": "data_structures_heaps"
+      "to": "data_structures_hash_tables"
     },
     {
       "from": "algorithms",
@@ -138,7 +129,7 @@ Flowchart Data (JSON):
     },
     {
       "from": "algorithms",
-      "to": "algorithms_divide_and_conquer"
+      "to": "algorithms_greedy_algorithms"
     }
   ]
 }
