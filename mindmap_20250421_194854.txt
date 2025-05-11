@@ -1,0 +1,67 @@
+Mind Map Data (JSON):
+
+{
+  "nodes": [
+    {
+      "id": "cloud_computing",
+      "label": "Cloud Computing",
+      "level": 0
+    },
+    {
+      "id": "cloud_computing_introduction",
+      "label": "Introduction to Cloud Computing",
+      "level": 1
+    },
+    {
+      "id": "cloud_computing_architecture",
+      "label": "Cloud Architecture and Cloud Services",
+      "level": 1
+    },
+    {
+      "id": "cloud_computing_models",
+      "label": "Cloud Models Public vs Private",
+      "level": 1
+    },
+    {
+      "id": "cloud_computing_technologies",
+      "label": "Cloud Technologies for Network-Based System",
+      "level": 1
+    },
+    {
+      "id": "cloud_computing_system_models",
+      "label": "System Models for Distributed and Cloud Computing",
+      "level": 1
+    },
+    {
+      "id": "cloud_computing_nist",
+      "label": "NIST Cloud Computing Reference Architecture",
+      "level": 1
+    }
+  ],
+  "edges": [
+    {
+      "from": "cloud_computing",
+      "to": "cloud_computing_introduction"
+    },
+    {
+      "from": "cloud_computing",
+      "to": "cloud_computing_architecture"
+    },
+    {
+      "from": "cloud_computing",
+      "to": "cloud_computing_models"
+    },
+    {
+      "from": "cloud_computing",
+      "to": "cloud_computing_technologies"
+    },
+    {
+      "from": "cloud_computing",
+      "to": "cloud_computing_system_models"
+    },
+    {
+      "from": "cloud_computing",
+      "to": "cloud_computing_nist"
+    }
+  ]
+}

@@ -6,6 +6,7 @@ import plotly.graph_objects as go
 import numpy as np
 from firebase_auth import is_authenticated
 from datetime import datetime
+import os
 def generate_mindmap():
     """Generate and display a static mind map using Plotly with important topics and subheadings from user content"""
     st.title("🧠 Knowledge Mind Map")

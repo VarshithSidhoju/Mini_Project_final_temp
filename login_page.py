@@ -4,7 +4,7 @@ from firebase_auth import login_user, signup_user, logout_user, is_authenticated
 def show_login_page():
     st.title("Welcome to the Exam Prep App")
     
-    tab1, tab2 = st.tabs(["Login", "Sign Uyp"])
+    tab1, tab2 = st.tabs(["Login", "Sign Up"])
     
     with tab1:
         with st.form("login_form"):

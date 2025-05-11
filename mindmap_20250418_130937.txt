@@ -1,0 +1,85 @@
+Mind Map Data (JSON):
+
+{
+  "nodes": [
+    {
+      "id": "tourism_in_india",
+      "label": "Tourism in India",
+      "level": 0
+    },
+    {
+      "id": "tourism_in_india_destinations",
+      "label": "Destinations",
+      "level": 1
+    },
+    {
+      "id": "tourism_in_india_culture",
+      "label": "Culture",
+      "level": 1
+    },
+    {
+      "id": "tourism_in_india_activities",
+      "label": "Activities",
+      "level": 1
+    },
+    {
+      "id": "tourism_in_india_food",
+      "label": "Food",
+      "level": 1
+    },
+    {
+      "id": "tourism_in_india_accommodation",
+      "label": "Accommodation",
+      "level": 1
+    },
+    {
+      "id": "tourism_in_india_transportation",
+      "label": "Transportation",
+      "level": 1
+    },
+    {
+      "id": "tourism_in_india_safety",
+      "label": "Safety",
+      "level": 1
+    },
+    {
+      "id": "tourism_in_india_best_time_to_visit",
+      "label": "Best Time to Visit",
+      "level": 1
+    }
+  ],
+  "edges": [
+    {
+      "from": "tourism_in_india",
+      "to": "tourism_in_india_destinations"
+    },
+    {
+      "from": "tourism_in_india",
+      "to": "tourism_in_india_culture"
+    },
+    {
+      "from": "tourism_in_india",
+      "to": "tourism_in_india_activities"
+    },
+    {
+      "from": "tourism_in_india",
+      "to": "tourism_in_india_food"
+    },
+    {
+      "from": "tourism_in_india",
+      "to": "tourism_in_india_accommodation"
+    },
+    {
+      "from": "tourism_in_india",
+      "to": "tourism_in_india_transportation"
+    },
+    {
+      "from": "tourism_in_india",
+      "to": "tourism_in_india_safety"
+    },
+    {
+      "from": "tourism_in_india",
+      "to": "tourism_in_india_best_time_to_visit"
+    }
+  ]
+}

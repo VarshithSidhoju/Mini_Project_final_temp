@@ -105,11 +105,17 @@ def render_app_content():
         # Generate topics if they don't exist
         if not st.session_state.get("topics_dict"):
             with st.spinner("Analyzing your content..."):
-                content = st.session_state.file_content if st.session_state.uploaded_file else st.session_state.custom_topic
+                # Safely get content
+                content = st.session_state.get("user_input", "")
+                
+                if not content and st.session_state.get("uploaded_file"):
+                    content = st.session_state.get("file_content", "")
+                elif not content and st.session_state.get("custom_topic"):
+                    content = st.session_state.custom_topic
                 
                 if content:
                     response = process_task(
-                        "Important Topics",
+                        "Extract Key Topics",
                         f"Extract main topics and key points from:\n{content[:3000]}"
                     )
                     
@@ -128,6 +134,8 @@ def render_app_content():
                         
                         st.session_state.topics_dict = topics
                         st.rerun()
+                else:
+                    st.warning("⚠️ No content available to analyze. Please upload a file with readable text or enter a topic.")
 
         # Display topics in cards
         topics_dict = st.session_state.get("topics_dict", {})
@@ -137,7 +145,6 @@ def render_app_content():
                 st.markdown(f"### {main_topic}")
                 
                 for point in points:
-                    # Create card without star button
                     st.markdown(f"""
                     <div style="
                         background-color: #f8f9fa;
@@ -298,9 +305,9 @@ def render_app_content():
                         prompt = generate_prompt(num_mcq, num_3_marks, num_5_marks, difficulty, topics_list)
                         st.session_state.response = get_output(prompt)
                         st.text_area("📄 Generated Question Paper:", st.session_state.response, height=400)
-        if st.button("Back to Options"):
-            st.session_state.page = "options"
-            st.rerun()
+        # if st.button("Back to Options"):
+        #     st.session_state.page = "options"
+        #     st.rerun()
         if st.button("🏠 Back to Home"):
             st.session_state.page = "upload"
             st.rerun()
